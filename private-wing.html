@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Private Wing - ArcadiaX</title>
+</head>
+<body>
+  <h1>Private Wing Access</h1>
+  <input type="password" id="code1" placeholder="Enter Security Code 1"/>
+  <input type="password" id="code2" placeholder="Enter Security Code 2"/>
+  <button onclick="checkCodes()">Enter</button>
+  <script>
+    function checkCodes() {
+      const c1 = document.getElementById('code1').value;
+      const c2 = document.getElementById('code2').value;
+      if (c1 === 'SECRET1' && c2 === 'SECRET2') {
+        alert('Access Granted');
+        window.location.href = 'private-dashboard.html';
+      } else {
+        alert('Access Denied');
+      }
+    }
+  </script>
+</body>
+</html>
